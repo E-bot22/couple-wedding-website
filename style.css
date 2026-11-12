@@ -1,0 +1,227 @@
+
+:root {
+  --wine: #641b32;
+  --gold: #c5a36a;
+  --cream: #fffaf5;
+  --ink: #44333a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Georgia, serif;
+  text-align: center;
+}
+
+button {
+  border: 0;
+  background: var(--wine);
+  color: white;
+  padding: 15px 25px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #8a304b;
+  transform: translateY(-2px);
+}
+
+/* Opening Invitation */
+
+.cover {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, #4b1026, #7d3448);
+}
+
+.envelope {
+  width: min(92vw, 460px);
+  padding: 56px 24px;
+  background: #fff8ef;
+  border: 1px solid var(--gold);
+  box-shadow: 0 18px 55px #21081288;
+}
+
+.seal {
+  margin: 0 auto 25px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--wine);
+  color: #f7dfb5;
+  font-size: 28px;
+}
+
+.envelope p,
+.eyebrow {
+  letter-spacing: 3px;
+  font: 11px Arial, sans-serif;
+}
+
+.envelope h1 {
+  font-size: clamp(38px, 9vw, 60px);
+  font-weight: 400;
+  color: var(--wine);
+}
+
+/* Homepage */
+
+.hero {
+  padding: 85px 20px 55px;
+  background: #f6e9e4;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 10vw, 72px);
+  font-weight: 400;
+  color: var(--wine);
+  margin: 15px;
+}
+
+.hero-photo {
+  margin: 30px auto;
+  width: min(86vw, 520px);
+  height: 330px;
+  background: #ead9d4;
+  display: grid;
+  place-items: center;
+  color: #8a7378;
+}
+
+/* Sections */
+
+section,
+.countdown {
+  padding: 55px 20px;
+  max-width: 850px;
+  margin: auto;
+}
+
+h2 {
+  font-weight: 400;
+  color: var(--wine);
+  font-size: 32px;
+}
+
+#timer {
+  font: 20px Arial, sans-serif;
+  color: var(--gold);
+}
+
+/* Wedding Events */
+
+.event {
+  padding: 24px;
+  margin: 18px auto;
+  max-width: 500px;
+  border: 1px solid #e6d7ce;
+  background: #fffdf9;
+}
+
+.event h3 {
+  color: var(--wine);
+}
+
+a {
+  color: var(--wine);
+}
+
+/* Our Moments Gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.gallery div {
+  min-height: 180px;
+  background: #eadbd6;
+  display: grid;
+  place-items: center;
+  color: #8a7378;
+}
+
+.muted {
+  color: #8b7778;
+}
+
+/* Colour of the Day */
+
+.swatches {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.swatches i {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e8c8c8;
+}
+
+.swatches i:nth-child(2) {
+  background: #d9c29d;
+}
+
+.swatches i:nth-child(3) {
+  background: #641b32;
+}
+
+/* RSVP */
+
+form {
+  display: grid;
+  gap: 12px;
+  max-width: 480px;
+  margin: 25px auto;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dfd0c8;
+  background: white;
+  font: 15px Arial, sans-serif;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Footer */
+
+footer {
+  padding: 55px 20px;
+  background: #f6e9e4;
+  color: var(--wine);
+}
+
+/* Mobile and Desktop */
+
+@media (min-width: 650px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  }
+  
