@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Opening Invitation -->
+  <div class="cover" id="cover">
+    <div class="envelope">
+      <div class="seal">♥</div>
+      <p>YOU ARE INVITED TO CELEBRATE</p>
+      <h1>Our Wedding</h1>
+      <button id="openInvite">TAP TO OPEN</button>
+    </div>
+  </div>
+
+  <!-- Main Wedding Website -->
+  <main id="site" hidden>
+
+    <header class="hero">
+      <p class="eyebrow">TOGETHER WITH OUR FAMILIES</p>
+      <h1 id="coupleNames">Alex & Jamie</h1>
+      <p>INVITE YOU TO CELEBRATE THEIR WEDDING</p>
+      <div class="hero-photo">Add your couple photo here</div>
+      <h2 id="weddingDate">12 December 2026</h2>
+      <p>With love, we can't wait to celebrate with you.</p>
+    </header>
+
+    <section class="countdown">
+      <h2>Counting Down to Forever</h2>
+      <div id="timer">Loading...</div>
+    </section>
+
+    <section>
+      <h2>The Wedding Day</h2>
+      <div class="event">
+        <h3>Wedding Ceremony</h3>
+        <p>Time: 10:00 AM</p>
+        <p id="venue">Wedding venue, City</p>
+        <a id="mapLink" href="#" target="_blank">Get Directions</a>
+      </div>
+
+      <div class="event">
+        <h3>Reception</h3>
+        <p>Time: 1:00 PM</p>
+        <p>Join us for food, music and celebration.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Our Moments</h2>
+      <p class="muted">A collection of beautiful memories.</p>
+      <div class="gallery">
+        <div>Photo 1</div>
+        <div>Photo 2</div>
+        <div>Photo 3</div>
+        <div>Photo 4</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Colour of the Day</h2>
+      <p>Blush · Champagne · Burgundy</p>
+      <div class="swatches">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="rsvp">
+      <h2>Will You Celebrate With Us?</h2>
+      <p>Please let us know if you can join us.</p>
+
+      <form id="rsvpForm">
+        <input name="name" placeholder="Your full name" required>
+        <input name="email" type="email" placeholder="Email address">
+        <input name="phone" placeholder="Phone number">
+
+        <select name="attendance" required>
+          <option value="">Will you attend?</option>
+          <option>Accept with pleasure</option>
+          <option>Regretfully decline</option>
+        </select>
+
+        <input name="guests" type="number" min="1" max="10" value="1">
+        <textarea name="note" placeholder="A note to the couple"></textarea>
+
+        <button type="submit">SEND RSVP</button>
+      </form>
+
+      <p id="rsvpMessage"></p>
+    </section>
+
+    <footer>
+      <h2>With Love,</h2>
+      <p id="footerNames">Alex & Jamie</p>
+      <p>We look forward to celebrating with you.</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+        </html>
+        
