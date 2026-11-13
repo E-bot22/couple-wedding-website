@@ -1108,3 +1108,75 @@ button:hover {
 .rsvp-form-panel textarea::placeholder {
   color: #C7B9B0;
 }
+
+/* GLOBAL TEXT CLARITY FIX */
+
+body,
+#mainWebsite {
+  color: #F4EBDD !important;
+}
+
+#mainWebsite h1,
+#mainWebsite h2,
+#mainWebsite h3,
+#mainWebsite h4,
+#mainWebsite p,
+#mainWebsite span,
+#mainWebsite label,
+#mainWebsite li,
+#mainWebsite a,
+#mainWebsite small {
+  opacity: 1 !important;
+}
+
+/* Clear, bright headings */
+#mainWebsite h1,
+#mainWebsite h2,
+#mainWebsite h3,
+#mainWebsite h4 {
+  color: #E8C991 !important;
+}
+
+/* Body text */
+#mainWebsite p,
+#mainWebsite li,
+#mainWebsite small {
+  color: #F4EBDD !important;
+}
+
+/* Navigation and links */
+#mainWebsite a {
+  color: #E8C991;
+}
+
+/* Form labels */
+.rsvp-form-panel label {
+  color: #F4EBDD !important;
+  font-weight: 500;
+}
+
+/* Form text */
+.rsvp-form-panel input,
+.rsvp-form-panel select,
+.rsvp-form-panel textarea {
+  color: #4A1026 !important;
+  background: #FFF8EF !important;
+  opacity: 1 !important;
+}
+
+/* Decorative gold details */
+.rsvp-card-label,
+.intro-label,
+.intro-date {
+  color: #E8C991 !important;
+  opacity: 1 !important;
+}
+
+/* Remove faded text effects */
+#mainWebsite * {
+  text-shadow: none;
+}
+
+#mainWebsite section {
+  color: #F4EBDD;
+}
