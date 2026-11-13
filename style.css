@@ -866,3 +866,166 @@ button, input, select, textarea {
     line-height: 2;
   }
 }
+
+/* LUXURY RSVP INVITATION */
+
+.rsvp-section {
+  padding: 120px 7%;
+  text-align: center;
+  background: #fff8f5;
+  color: #541f32;
+}
+
+.rsvp-decoration {
+  font-size: 55px;
+  color: #bd9270;
+  margin-bottom: 20px;
+}
+
+.rsvp-small-title,
+.rsvp-card-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #98636b;
+}
+
+.rsvp-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 7vw, 75px);
+  font-weight: 400;
+  margin: 20px 0 50px;
+}
+
+.rsvp-invitation-card {
+  max-width: 650px;
+  margin: auto;
+  padding: 75px 35px;
+  background: #fffdfb;
+  border: 1px solid #d8b994;
+  outline: 1px solid #d8b994;
+  outline-offset: 9px;
+  box-shadow: 0 20px 55px rgba(84,31,50,.10);
+}
+
+.rsvp-card-flower {
+  font-size: 42px;
+  color: #bd9270;
+  margin-bottom: 25px;
+}
+
+.rsvp-invitation-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 30px 0;
+}
+
+.rsvp-invitation-card > p:not(.rsvp-card-label):not(.rsvp-card-footer) {
+  max-width: 390px;
+  margin: auto;
+  line-height: 2;
+  color: #79515a;
+  font-size: 14px;
+}
+
+.rsvp-card-line {
+  width: 90px;
+  height: 1px;
+  background: #bd9270;
+  margin: 35px auto;
+}
+
+.rsvp-invitation-card button,
+.rsvp-form-panel button {
+  padding: 17px 42px;
+  border: none;
+  background: #541f32;
+  color: white;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.rsvp-invitation-card button:hover,
+.rsvp-form-panel button:hover {
+  background: #98636b;
+  transform: translateY(-3px);
+}
+
+.rsvp-card-footer {
+  margin-top: 35px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #98636b;
+}
+
+.rsvp-form-panel {
+  max-width: 650px;
+  margin: 65px auto 0;
+  padding: 50px 35px;
+  background: #fffdfb;
+  border: 1px solid #d8b994;
+  text-align: left;
+}
+
+.rsvp-form-panel h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.rsvp-form-panel > p {
+  text-align: center;
+  color: #79515a;
+  margin-bottom: 35px;
+}
+
+.rsvp-form-panel label {
+  display: block;
+  margin: 20px 0 8px;
+  color: #541f32;
+  font-size: 13px;
+}
+
+.rsvp-form-panel input,
+.rsvp-form-panel select,
+.rsvp-form-panel textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dfcfc7;
+  background: #fffaf8;
+  font: inherit;
+  outline: none;
+}
+
+.rsvp-form-panel input:focus,
+.rsvp-form-panel select:focus,
+.rsvp-form-panel textarea:focus {
+  border-color: #98636b;
+}
+
+.rsvp-form-panel form button {
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media(max-width:600px) {
+  .rsvp-section {
+    padding: 85px 7%;
+  }
+
+  .rsvp-invitation-card {
+    padding: 55px 22px;
+  }
+
+  .rsvp-invitation-card h3 {
+    font-size: 45px;
+  }
+
+  .rsvp-form-panel {
+    padding: 35px 20px;
+  }
+}
+
