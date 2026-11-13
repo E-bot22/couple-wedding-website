@@ -4,106 +4,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#641d32">
-  <title>Our Wedding Celebration</title>
+  <meta name="theme-color" content="#f8f1e9">
+  <title>Sophia & Micheal | Wedding Celebration</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <!-- BACKGROUND MUSIC -->
   <audio id="weddingMusic" loop>
     <source src="assets/wedding-song.mp3" type="audio/mpeg">
   </audio>
 
   <!-- OPENING INVITATION -->
   <section id="invitation" class="invitation">
-    <div class="invitation-flower flower-one">❀</div>
-    <div class="invitation-flower flower-two">✿</div>
+    <img class="opening-flower opening-flower-left"
+      src="https://meetthemicheals.presency.co/assets/art/stem-regalis.webp" alt="">
+    <img class="opening-flower opening-flower-right"
+      src="https://meetthemicheals.presency.co/assets/art/stem-violacea.webp" alt="">
 
-    <div class="envelope">
-      <div class="envelope-top"></div>
-      <div class="envelope-paper">
-        <p class="small-heading">TOGETHER WITH THEIR FAMILIES</p>
-        <h1>Our Wedding</h1>
-        <p class="envelope-names">The Beginning of Forever</p>
-        <div class="gold-line"></div>
-        <p class="tap-message">A beautiful celebration awaits</p>
+    <div class="opening-content">
+      <p class="opening-kicker">YOU ARE CORDIALLY INVITED TO</p>
+
+      <div class="envelope">
+        <div class="envelope-paper">
+          <p>THE WEDDING CELEBRATION OF</p>
+          <h1>Sophia <span>&</span> Micheal</h1>
+          <div class="envelope-divider">❧</div>
+          <p class="envelope-date">A DAY TO REMEMBER FOREVER</p>
+        </div>
+        <div class="envelope-back"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <div class="wax-seal">S <span>&</span> M</div>
       </div>
-      <div class="envelope-front"></div>
-      <div class="wax-seal">♥</div>
-    </div>
 
-    <p class="tap-open">TAP TO OPEN</p>
-    <p class="opening-caption">An invitation to celebrate love</p>
+      <button id="openInvitation" class="tap-open" type="button">
+        TAP TO OPEN
+      </button>
+      <p class="opening-caption">A beautiful celebration of love awaits</p>
+    </div>
   </section>
 
   <!-- MAIN WEBSITE -->
   <main id="mainWebsite" class="hidden">
 
-    <button id="musicToggle" class="music-button" aria-label="Toggle music">
+    <button id="musicToggle" class="music-button" type="button">
       ♫ Music
     </button>
 
-    <!-- HERO -->
+    <!-- HOMEPAGE -->
+    <section class="hero" id="home">
+      <img class="hero-flower hero-flower-left"
+        src="https://meetthemicheals.presency.co/assets/art/stem-pontiana.webp" alt="">
+      <img class="hero-flower hero-flower-right"
+        src="https://meetthemicheals.presency.co/assets/art/stem-foliacea.webp" alt="">
 
-<section class="couple-introduction" id="couple">
-  <div class="couple-intro-decoration">❀</div>
+      <p class="eyebrow">TOGETHER WITH THEIR FAMILIES</p>
+      <p class="hero-intro">REQUEST THE HONOUR OF YOUR PRESENCE</p>
 
-  <p class="intro-label">TOGETHER WITH THEIR FAMILIES</p>
+      <h1 class="hero-names">
+        Sophia <span>&</span> Micheal
+      </h1>
 
-  <h2 class="couple-names">
-    Alex <span>&</span> Jamie
-  </h2>
+      <p class="hero-subtitle">Are getting married</p>
 
-  <p class="intro-subtitle">
-    JOYFULLY INVITE YOU TO CELEBRATE THEIR WEDDING
-  </p>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1400"
+          alt="The couple">
+      </div>
 
-  <div class="couple-main-photo">
-    <img
-      src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1400"
-      alt="Alex and Jamie wedding portrait"
-    >
-  </div>
-
-  <p class="intro-date">A BEAUTIFUL DAY. A FOREVER PROMISE.</p>
-
-  <div class="intro-flower">✿ ❀ ✿</div>
-</section>
-
-    <section class="hero">
-      <p class="eyebrow">A CELEBRATION OF LOVE</p>
-      <div class="decorative-line">✧ ❀ ✧</div>
-      <h1>Our Forever Begins</h1>
-      <p class="hero-subtitle">Together with our families</p>
-      <h2 id="coupleNames">Alex <span>&</span> Jamie</h2>
-      <p class="wedding-date">SAVE THE DATE</p>
-      <div class="decorative-line">✧</div>
-      <p class="hero-message">
-        Two hearts, one beautiful journey, and a lifetime of love.
-      </p>
-      <a href="#countdown" class="discover-button">DISCOVER OUR STORY</a>
-    </section>
-
-    <!-- INTRODUCTION -->
-    <section class="section introduction">
-      <p class="eyebrow">WITH JOY IN OUR HEARTS</p>
-      <h2>Our Special Day</h2>
-      <div class="section-flower">❀</div>
-      <p>
-        We warmly invite you to share in our happiness
-        as we begin a beautiful new chapter together.
-        Your presence will make our celebration even more special.
-      </p>
+      <p class="hero-date">SAVE THE DATE</p>
+      <p class="hero-message">Two hearts. One love. A lifetime together.</p>
+      <a href="#countdown" class="discover-button">CELEBRATE WITH US</a>
     </section>
 
     <!-- COUNTDOWN -->
     <section class="section countdown-section" id="countdown">
-      <p class="eyebrow">THE BIG DAY IS COMING</p>
-      <h2>Counting Down to Forever</h2>
+      <p class="eyebrow">THE COUNTDOWN BEGINS</p>
+      <h2>Until We Say I Do</h2>
       <div class="countdown" id="countdownTimer">
         <div><strong id="days">00</strong><span>Days</span></div>
         <div><strong id="hours">00</strong><span>Hours</span></div>
@@ -114,170 +93,143 @@
 
     <!-- OUR STORY -->
     <section class="section story-section">
-      <p class="eyebrow">A JOURNEY OF LOVE</p>
+      <p class="eyebrow">A LOVE STORY WRITTEN IN THE STARS</p>
       <h2>Our Story</h2>
-      <div class="story-decoration">❀</div>
-      <p>
-        Every love story is beautiful, but ours is our favourite.
-        We are grateful for every moment that brought us here
-        and excited for everything still to come.
-      </p>
+      <div class="section-ornament">❧</div>
+      <p>Two hearts found each other, and a beautiful journey began. We cannot wait to celebrate the beginning of forever with you.</p>
     </section>
 
-    <!-- WEDDING EVENTS -->
+    <!-- EVENTS -->
     <section class="section events-section" id="events">
-      <p class="eyebrow">JOIN US IN CELEBRATION</p>
-      <h2>Wedding Celebrations</h2>
+      <p class="eyebrow">JOIN US FOR THE CELEBRATION</p>
+      <h2>Schedule of Events</h2>
 
       <div class="event-card">
-        <span class="event-icon">✿</span>
+        <p class="event-number">01</p>
         <h3>Traditional Wedding</h3>
         <p class="event-date">Date to be announced</p>
         <p>Time: To be announced</p>
         <p>Venue: To be announced</p>
-        <a href="#" class="direction-link">GET DIRECTIONS ↗</a>
+        <a href="#" class="direction-link">VIEW LOCATION ↗</a>
       </div>
 
       <div class="event-card">
-        <span class="event-icon">♡</span>
+        <p class="event-number">02</p>
         <h3>White Wedding</h3>
         <p class="event-date">Date to be announced</p>
         <p>Time: To be announced</p>
         <p>Venue: To be announced</p>
-        <a href="#" class="direction-link">GET DIRECTIONS ↗</a>
+        <a href="#" class="direction-link">VIEW LOCATION ↗</a>
       </div>
 
       <div class="event-card">
-        <span class="event-icon">✧</span>
+        <p class="event-number">03</p>
         <h3>Wedding Reception</h3>
         <p class="event-date">Date to be announced</p>
         <p>Time: To be announced</p>
         <p>Venue: To be announced</p>
-        <a href="#" class="direction-link">GET DIRECTIONS ↗</a>
+        <a href="#" class="direction-link">VIEW LOCATION ↗</a>
       </div>
     </section>
 
     <!-- OUR MOMENTS -->
     <section class="section moments-section" id="moments">
-      <p class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</p>
+      <p class="eyebrow">THE BEAUTY OF OUR JOURNEY</p>
       <h2>Our Moments</h2>
-      <p class="gallery-caption">A glimpse into our beautiful journey</p>
+      <p class="gallery-caption">A collection of memories we treasure</p>
 
       <div class="gallery-frame">
-        <button class="gallery-arrow" id="galleryPrev" aria-label="Previous photos">‹</button>
+        <button class="gallery-arrow" id="galleryPrev" type="button" aria-label="Previous photos">‹</button>
 
         <div class="gallery-track" id="galleryTrack">
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700" alt="Wedding memory">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900" alt="Wedding memory 1">
             <p>A beautiful beginning</p>
           </div>
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=700" alt="Wedding memory">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900" alt="Wedding memory 2">
             <p>Moments together</p>
           </div>
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=700" alt="Wedding memory">
+            <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=900" alt="Wedding memory 3">
             <p>Forever memories</p>
           </div>
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=700" alt="Wedding memory">
+            <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=900" alt="Wedding memory 4">
             <p>Our journey</p>
           </div>
         </div>
 
-        <button class="gallery-arrow" id="galleryNext" aria-label="Next photos">›</button>
+        <button class="gallery-arrow" id="galleryNext" type="button" aria-label="Next photos">›</button>
       </div>
-      <p class="gallery-hint">SWIPE TO EXPLORE OUR MEMORIES</p>
+      <p class="gallery-hint">SWIPE TO SEE MORE MEMORIES</p>
     </section>
 
     <!-- COLOUR OF THE DAY -->
     <section class="section colour-section">
-      <p class="eyebrow">DRESS WITH LOVE</p>
+      <p class="eyebrow">DRESS CODE</p>
       <h2>Colour of the Day</h2>
-      <p>Let's make the celebration beautiful together.</p>
+      <p>Celebrate the day in our chosen wedding colours.</p>
       <div class="colour-palette">
-        <div style="background:#641d32"></div>
-        <div style="background:#d9a6a9"></div>
-        <div style="background:#ead9bd"></div>
-        <div style="background:#b99a65"></div>
-        <div style="background:#fff5eb"></div>
+        <div style="background:#"></div>
+        <div style="background:#"></div>
+        <div style="background:#"></div>
+        <div style="background:#"></div>
       </div>
-      <p class="colour-caption">Burgundy • Blush • Champagne • Gold • Ivory</p>
+      <p class="colour-caption">Wedding colours to be confirmed</p>
     </section>
 
     <!-- RSVP -->
-    
-<section class="rsvp-section" id="rsvp">
-  <div class="rsvp-decoration">❀</div>
+    <section class="section rsvp-section" id="rsvp">
+      <p class="eyebrow">WE WOULD LOVE TO HAVE YOU</p>
+      <h2>Kindly Respond</h2>
 
-  <p class="rsvp-small-title">A CELEBRATION OF LOVE</p>
+      <div class="rsvp-invitation-card">
+        <p class="rsvp-card-label">TO OUR DEAREST FAMILY & FRIENDS</p>
+        <div class="rsvp-ornament">❧</div>
+        <h3>Will You Join Us?</h3>
+        <p>Your presence will make our celebration complete. Kindly let us know if you will be joining us.</p>
+        <button type="button" id="openRsvpButton">TAP TO OPEN</button>
+        <p class="rsvp-card-footer">WITH LOVE, SOPHIA & MICHEAL</p>
+      </div>
 
-  <h2 class="rsvp-heading">You Are Invited</h2>
+      <div class="rsvp-form-panel hidden" id="rsvpFormPanel">
+        <h3>Kindly Respond</h3>
+        <form id="rsvpForm">
+          <label for="guestName">Your Full Name</label>
+          <input type="text" id="guestName" required>
 
-  <div class="rsvp-invitation-card">
-    <div class="rsvp-card-flower">✿</div>
+          <label for="guestEmail">Email Address</label>
+          <input type="email" id="guestEmail">
 
-    <p class="rsvp-card-label">TO OUR DEAREST FAMILY & FRIENDS</p>
+          <label for="guestPhone">Phone Number</label>
+          <input type="tel" id="guestPhone">
 
-    <h3>We Saved You<br>A Seat</h3>
+          <label for="attendance">Will you attend?</label>
+          <select id="attendance" required>
+            <option value="">Choose your response</option>
+            <option value="Joyfully Accept">Joyfully Accept</option>
+            <option value="Regretfully Decline">Regretfully Decline</option>
+          </select>
 
-    <p>
-      Your presence would make our special day
-      even more beautiful. Kindly let us know
-      if you will be celebrating with us.
-    </p>
+          <label for="guestCount">Number of Guests</label>
+          <input type="number" id="guestCount" min="1" value="1">
 
-    <div class="rsvp-card-line"></div>
+          <label for="guestMessage">Message to the Couple</label>
+          <textarea id="guestMessage" rows="4"></textarea>
 
-    <button type="button" id="openRsvpButton">
-      RSVP HERE
-    </button>
-
-    <p class="rsvp-card-footer">WITH LOVE, ALEX & JAMIE</p>
-  </div>
-
-  <div class="rsvp-form-panel hidden" id="rsvpFormPanel">
-    <h3>Kindly Respond</h3>
-    <p>We look forward to celebrating with you.</p>
-
-    <form id="rsvpForm">
-      <label for="guestName">Your Full Name</label>
-      <input type="text" id="guestName" name="guestName" required>
-
-      <label for="guestEmail">Email Address</label>
-      <input type="email" id="guestEmail" name="guestEmail">
-
-      <label for="guestPhone">Phone Number</label>
-      <input type="tel" id="guestPhone" name="guestPhone">
-
-      <label for="attendance">Will you attend?</label>
-      <select id="attendance" name="attendance" required>
-        <option value="">Choose your response</option>
-        <option value="Accept">Joyfully Accept</option>
-        <option value="Decline">Regretfully Decline</option>
-      </select>
-
-      <label for="guestCount">Number of Guests</label>
-      <input type="number" id="guestCount" name="guestCount" min="1" value="1">
-
-      <label for="guestMessage">Message to the Couple</label>
-      <textarea id="guestMessage" name="guestMessage" rows="4"></textarea>
-
-      <button type="submit">SEND MY RESPONSE</button>
-    </form>
-  </div>
-</section>
-    
+          <button type="submit">SEND MY RESPONSE</button>
+        </form>
+      </div>
+    </section>
 
     <!-- CLOSING -->
     <footer class="closing-section">
-      <div class="footer-flower">❀</div>
-      <p class="eyebrow">WITH LOVE AND GRATITUDE</p>
-      <h2>Forever Starts Here</h2>
-      <p>Thank you for being part of our beautiful story.</p>
-      <div class="decorative-line">✧ ♥ ✧</div>
-      <p class="footer-names">Alex & Jamie</p>
-      <p class="copyright">MADE WITH LOVE</p>
+      <div class="footer-ornament">❧</div>
+      <p class="eyebrow">THANK YOU FOR BEING PART OF OUR STORY</p>
+      <h2>Forever Begins Here</h2>
+      <p>With love and gratitude</p>
+      <p class="footer-names">Sophia & Micheal</p>
     </footer>
 
   </main>
