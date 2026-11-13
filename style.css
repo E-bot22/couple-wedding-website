@@ -849,4 +849,49 @@ img {
     transition-duration: .01ms !important;
   }
    }
+
+/* MAIN HOMEPAGE - USER'S ORIGINAL PHOTO */
+.hero-photo {
+  background-image: url("https://i.postimg.cc/Y9wkt73P/35fd05fd59b6be5b7c5e629642efcc63.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 15px;
+}
+
+/* FOUR ELEGANT ROUND COUPLE PHOTO FRAMES */
+.couple-photo-frames {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  width: 100%;
+}
+
+.round-photo-frame {
+  width: 105px;
+  height: 105px;
+  border: 3px solid #d6b477;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .hero-photo {
+    min-height: 580px;
+  }
+
+  .round-photo-frame {
+    width: 82px;
+    height: 82px;
+  }
+}
+
              
