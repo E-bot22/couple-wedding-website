@@ -1031,4 +1031,80 @@ button, input, select, textarea {
     padding: 35px 20px;
   }
 }
+171318
 
+/* ROYAL DARK WEDDING THEME */
+
+body {
+  background: #171318;
+  color: #E8DDCE;
+}
+
+#mainWebsite {
+  background: #171318;
+  color: #E8DDCE;
+}
+
+#mainWebsite section,
+.couple-introduction,
+.rsvp-section {
+  background-color: #171318;
+  color: #E8DDCE;
+}
+
+#mainWebsite h1,
+#mainWebsite h2,
+#mainWebsite h3,
+#mainWebsite p {
+  color: #E8DDCE;
+}
+
+.couple-names,
+.rsvp-heading,
+.rsvp-invitation-card h3 {
+  color: #D4AF78;
+}
+
+.intro-label,
+.intro-subtitle,
+.intro-date,
+.rsvp-small-title {
+  color: #D4AF78;
+}
+
+.rsvp-invitation-card,
+.rsvp-form-panel {
+  background: #4A1026;
+  border-color: #B89555;
+  color: #E8DDCE;
+}
+
+.rsvp-invitation-card p,
+.rsvp-form-panel p,
+.rsvp-form-panel label {
+  color: #E8DDCE;
+}
+
+button {
+  background: #4A1026;
+  color: #E8DDCE;
+  border: 1px solid #B89555;
+}
+
+button:hover {
+  background: #B89555;
+  color: #171318;
+}
+
+.rsvp-form-panel input,
+.rsvp-form-panel select,
+.rsvp-form-panel textarea {
+  background: #241B21;
+  color: #FFFFFF;
+  border-color: #B89555;
+}
+
+.rsvp-form-panel input::placeholder,
+.rsvp-form-panel textarea::placeholder {
+  color: #C7B9B0;
+}
