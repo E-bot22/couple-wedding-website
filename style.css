@@ -1244,3 +1244,55 @@ body,
   color: #FFF8EF !important;
   opacity: 1 !important;
 }
+/* CONSISTENT DARK WEDDING THEME */
+
+#mainWebsite,
+#mainWebsite section,
+#mainWebsite .hero,
+#mainWebsite .story-section,
+#mainWebsite .countdown-section,
+#mainWebsite .events-section,
+#mainWebsite .gallery-section,
+#mainWebsite .colors-section,
+#mainWebsite .rsvp-section,
+#mainWebsite footer {
+  background: #171318 !important;
+  color: #FFF8EF !important;
+}
+
+/* All normal text */
+#mainWebsite p,
+#mainWebsite li,
+#mainWebsite label,
+#mainWebsite small,
+#mainWebsite span {
+  color: #FFF8EF !important;
+  opacity: 1 !important;
+}
+
+/* Headings */
+#mainWebsite h1,
+#mainWebsite h2,
+#mainWebsite h3,
+#mainWebsite h4 {
+  color: #E8C991 !important;
+  opacity: 1 !important;
+}
+
+/* Cards */
+#mainWebsite .event-card,
+#mainWebsite .story-card,
+#mainWebsite .rsvp-invitation-card,
+#mainWebsite .rsvp-form-panel {
+  background: #4A1026 !important;
+  color: #FFF8EF !important;
+  border: 1px solid #B89555 !important;
+}
+
+/* Keep form fields light for readability */
+#mainWebsite input,
+#mainWebsite select,
+#mainWebsite textarea {
+  background: #FFF8EF !important;
+  color: #32101F !important;
+}
