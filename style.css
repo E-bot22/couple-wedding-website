@@ -918,6 +918,37 @@ img {
   background-repeat: no-repeat;
 }
 
+/* YOUR ORIGINAL EVENT BACKGROUNDS */
+
+/* Traditional marriage */
+.events-section .event-card:nth-of-type(1) {
+  background:
+    linear-gradient(rgba(255,255,255,.70), rgba(255,255,255,.70)),
+    url("https://i.postimg.cc/JnRgTzKG/051ea1273bef6a4010bb9e012b6b4262.jpg") center/cover no-repeat;
+}
+
+/* White wedding */
+.events-section .event-card:nth-of-type(2) {
+  background:
+    linear-gradient(rgba(255,255,255,.70), rgba(255,255,255,.70)),
+    url("https://i.postimg.cc/W1rHTkHt/b8f720796144944b213fef094f542dea.jpg") center/cover no-repeat;
+}
+
+/* Reception */
+.events-section .event-card:nth-of-type(3) {
+  background:
+    linear-gradient(rgba(255,255,255,.70), rgba(255,255,255,.70)),
+    url("https://i.postimg.cc/tJSLnG3V/7a72c8b4e018861bc08fde8feb93ad1a.jpg") center/cover no-repeat;
+}
+
+/* RSVP background */
+.rsvp-section {
+  background:
+    linear-gradient(rgba(255,255,255,.48), rgba(255,255,255,.48)),
+    url("https://i.postimg.cc/tJSLnG3V/7a72c8b4e018861bc08fde8feb93ad1a.jpg") center/cover no-repeat;
+}
+
+
 /* RSVP - YOUR ORIGINAL PHOTO */
 .rsvp-section {
   background-image: url("https://i.postimg.cc/tJSLnG3V/7a72c8b4e018861bc08fde8feb93ad1a.jpg");
