@@ -1180,3 +1180,67 @@ body,
 #mainWebsite section {
   color: #F4EBDD;
 }
+/* FINAL RSVP BUTTON AND TEXT VISIBILITY FIX */
+
+/* Make RSVP button properly round */
+#mainWebsite .rsvp-invitation-card #openRsvpButton {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 230px !important;
+  min-height: 65px !important;
+  padding: 18px 40px !important;
+  border-radius: 999px !important;
+  background: #4A1026 !important;
+  color: #FFF8EF !important;
+  border: 2px solid #D4AF78 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  opacity: 1 !important;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+}
+
+/* Make all website text clear */
+#mainWebsite,
+#mainWebsite p,
+#mainWebsite li,
+#mainWebsite label,
+#mainWebsite small,
+#mainWebsite span {
+  color: #FFF8EF !important;
+  opacity: 1 !important;
+}
+
+/* Clear, bright headings */
+#mainWebsite h1,
+#mainWebsite h2,
+#mainWebsite h3,
+#mainWebsite h4 {
+  color: #E8C991 !important;
+  opacity: 1 !important;
+}
+
+/* Keep invitation labels gold */
+#mainWebsite .intro-label,
+#mainWebsite .intro-subtitle,
+#mainWebsite .intro-date,
+#mainWebsite .rsvp-small-title,
+#mainWebsite .rsvp-card-label {
+  color: #E8C991 !important;
+  opacity: 1 !important;
+}
+
+/* Keep form fields readable */
+#mainWebsite .rsvp-form-panel input,
+#mainWebsite .rsvp-form-panel select,
+#mainWebsite .rsvp-form-panel textarea {
+  background: #FFF8EF !important;
+  color: #32101F !important;
+  opacity: 1 !important;
+}
+
+#mainWebsite .rsvp-form-panel label {
+  color: #FFF8EF !important;
+  opacity: 1 !important;
+}
