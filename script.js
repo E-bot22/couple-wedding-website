@@ -239,6 +239,24 @@ rsvpForm.addEventListener("submit", function (event) {
 
 });
 
+// RSVP INVITATION OPENING
+const openRsvpButton = document.getElementById("openRsvpButton");
+const rsvpFormPanel = document.getElementById("rsvpFormPanel");
+
+if (openRsvpButton && rsvpFormPanel) {
+  openRsvpButton.addEventListener("click", function () {
+    rsvpFormPanel.classList.remove("hidden");
+
+    rsvpFormPanel.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    openRsvpButton.textContent = "RSVP FORM OPENED";
+  });
+}
+
+
 
 /* ========================================
    END OF WEDDING WEBSITE SCRIPT
