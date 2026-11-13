@@ -894,4 +894,36 @@ img {
   }
 }
 
+/* TRADITIONAL MARRIAGE - YOUR ORIGINAL PHOTO */
+.traditional-event {
+  background-image: url("https://i.postimg.cc/JnRgTzKG/051ea1273bef6a4010bb9e012b6b4262.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* WHITE WEDDING - YOUR ORIGINAL PHOTO */
+.white-wedding-event {
+  background-image: url("https://i.postimg.cc/W1rHTkHt/b8f720796144944b213fef094f542dea.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* RECEPTION - YOUR ORIGINAL PHOTO */
+.reception-event {
+  background-image: url("https://i.postimg.cc/tJSLnG3V/7a72c8b4e018861bc08fde8feb93ad1a.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* RSVP - YOUR ORIGINAL PHOTO */
+.rsvp-section {
+  background-image: url("https://i.postimg.cc/tJSLnG3V/7a72c8b4e018861bc08fde8feb93ad1a.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
              
