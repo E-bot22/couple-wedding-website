@@ -1,12 +1,22 @@
 
+/* ========================================
+   WEDDING WEBSITE — LUXURY DESIGN
+======================================== */
+
 :root {
-  --wine: #641b32;
-  --gold: #c5a36a;
-  --cream: #fffaf5;
-  --ink: #44333a;
+  --wine: #641d32;
+  --deep-wine: #421322;
+  --rose: #d9a6a9;
+  --blush: #f5e4e2;
+  --cream: #fffaf3;
+  --ivory: #fff5e9;
+  --gold: #bd9860;
+  --text: #49333a;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -15,213 +25,738 @@ html {
 }
 
 body {
-  margin: 0;
+  font-family: 'Poppins', sans-serif;
   background: var(--cream);
-  color: var(--ink);
-  font-family: Georgia, serif;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.section {
+  padding: 85px 22px;
   text-align: center;
+  position: relative;
 }
 
-button {
-  border: 0;
-  background: var(--wine);
-  color: white;
-  padding: 15px 25px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: 0.3s ease;
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-button:hover {
-  background: #8a304b;
-  transform: translateY(-2px);
+.section h2 {
+  color: var(--wine);
+  font-size: clamp(34px, 8vw, 48px);
+  margin-bottom: 22px;
 }
 
-/* Opening Invitation */
+.decorative-line {
+  color: var(--gold);
+  letter-spacing: 9px;
+  margin: 22px 0;
+}
 
-.cover {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 24px;
+/* ========================================
+   OPENING INVITATION
+======================================== */
+
+.invitation {
+  min-height: 100svh;
   background:
-    linear-gradient(135deg, #4b1026, #7d3448);
+    radial-gradient(circle at 15% 15%, #eac9c6 0%, transparent 30%),
+    radial-gradient(circle at 85% 85%, #dfb9b4 0%, transparent 35%),
+    linear-gradient(135deg, #5a172b, #8c3c4e, #4b1428);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 20px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+.invitation::before,
+.invitation::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgba(230, 198, 143, .35);
+  border-radius: 50%;
+}
+
+.invitation::before {
+  top: -125px;
+  left: -100px;
+}
+
+.invitation::after {
+  bottom: -125px;
+  right: -100px;
+}
+
+.invitation-flower {
+  position: absolute;
+  color: #e7c68f;
+  opacity: .75;
+  font-size: 65px;
+  animation: flowerFloat 5s ease-in-out infinite;
+}
+
+.flower-one {
+  top: 8%;
+  left: 7%;
+}
+
+.flower-two {
+  bottom: 10%;
+  right: 7%;
+  animation-delay: 1.5s;
+}
+
+@keyframes flowerFloat {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-12px) rotate(12deg); }
 }
 
 .envelope {
-  width: min(92vw, 460px);
-  padding: 56px 24px;
-  background: #fff8ef;
-  border: 1px solid var(--gold);
-  box-shadow: 0 18px 55px #21081288;
+  width: min(88vw, 390px);
+  height: 290px;
+  position: relative;
+  perspective: 1000px;
+  filter: drop-shadow(0 20px 25px rgba(0,0,0,.25));
 }
 
-.seal {
-  margin: 0 auto 25px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: var(--wine);
-  color: #f7dfb5;
-  font-size: 28px;
-}
-
-.envelope p,
-.eyebrow {
-  letter-spacing: 3px;
-  font: 11px Arial, sans-serif;
-}
-
-.envelope h1 {
-  font-size: clamp(38px, 9vw, 60px);
-  font-weight: 400;
+.envelope-paper {
+  position: absolute;
+  inset: 12px 15px 10px;
+  background: var(--ivory);
   color: var(--wine);
+  text-align: center;
+  padding: 38px 15px;
+  border: 2px solid var(--gold);
+  z-index: 1;
 }
 
-/* Homepage */
-
-.hero {
-  padding: 85px 20px 55px;
-  background: #f6e9e4;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 10vw, 72px);
-  font-weight: 400;
-  color: var(--wine);
-  margin: 15px;
-}
-
-.hero-photo {
-  margin: 30px auto;
-  width: min(86vw, 520px);
-  height: 330px;
-  background: #ead9d4;
-  display: grid;
-  place-items: center;
-  color: #8a7378;
-}
-
-/* Sections */
-
-section,
-.countdown {
-  padding: 55px 20px;
-  max-width: 850px;
-  margin: auto;
-}
-
-h2 {
-  font-weight: 400;
-  color: var(--wine);
-  font-size: 32px;
-}
-
-#timer {
-  font: 20px Arial, sans-serif;
+.small-heading {
+  font-size: 8px;
+  letter-spacing: 2px;
   color: var(--gold);
 }
 
-/* Wedding Events */
-
-.event {
-  padding: 24px;
-  margin: 18px auto;
-  max-width: 500px;
-  border: 1px solid #e6d7ce;
-  background: #fffdf9;
+.envelope-paper h1 {
+  font-size: 43px;
+  margin: 23px 0 8px;
 }
 
-.event h3 {
-  color: var(--wine);
+.envelope-names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
 }
 
-a {
-  color: var(--wine);
+.gold-line {
+  width: 75px;
+  height: 1px;
+  background: var(--gold);
+  margin: 17px auto;
 }
 
-/* Our Moments Gallery */
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+.tap-message {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
 }
 
-.gallery div {
-  min-height: 180px;
-  background: #eadbd6;
+.envelope-front {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, #a94f60, #702337);
+  clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+  z-index: 3;
+}
+
+.envelope-top {
+  position: absolute;
+  inset: 0;
+  background: #b65b6a;
+  clip-path: polygon(0 0, 100% 0, 50% 59%);
+  z-index: 4;
+  transform-origin: top;
+  transition: transform 1s ease;
+}
+
+.wax-seal {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+  background: radial-gradient(circle, #d5ad6c, #9e6d35);
+  border: 3px solid #e8c98e;
+  color: #6a2634;
   display: grid;
   place-items: center;
-  color: #8a7378;
+  font-size: 27px;
+  left: 50%;
+  top: 56%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 12px #39101e66;
+  transition: opacity .4s ease;
 }
 
-.muted {
-  color: #8b7778;
+.invitation.opening .envelope-top {
+  transform: rotateX(180deg);
+  z-index: 0;
 }
 
-/* Colour of the Day */
+.invitation.opening .wax-seal {
+  opacity: 0;
+}
 
-.swatches {
+.tap-open {
+  margin-top: 40px;
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  animation: pulse 1.8s infinite;
+}
+
+.opening-caption {
+  margin-top: 12px;
+  color: #f3d9c2;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .45; }
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+  min-height: 100svh;
+  padding: 110px 22px 90px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #f5dedd, transparent 70%),
+    linear-gradient(#fff8f1, #f9e8e6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::before,
+.hero::after {
+  content: "❀";
+  position: absolute;
+  color: #c78e8e;
+  font-size: 85px;
+  opacity: .35;
+}
+
+.hero::before {
+  top: 35px;
+  left: 8px;
+}
+
+.hero::after {
+  bottom: 30px;
+  right: 8px;
+}
+
+.hero h1 {
+  color: var(--wine);
+  font-size: clamp(39px, 10vw, 65px);
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  margin: 20px 0 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 21px;
+}
+
+.hero h2 {
+  color: var(--wine);
+  font-size: clamp(44px, 11vw, 70px);
+  margin: 12px 0;
+}
+
+.hero h2 span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.wedding-date {
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: var(--gold);
+}
+
+.hero-message {
+  max-width: 320px;
+  line-height: 1.9;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  margin: 12px 0 30px;
+}
+
+.discover-button {
+  display: inline-block;
+  padding: 14px 26px;
+  color: white;
+  background: var(--wine);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 10px;
+  border: 1px solid var(--gold);
+  transition: .3s;
+}
+
+.discover-button:hover {
+  background: var(--gold);
+}
+
+/* ========================================
+   INTRODUCTION AND STORY
+======================================== */
+
+.introduction {
+  background: var(--cream);
+}
+
+.introduction p,
+.story-section p {
+  max-width: 570px;
+  margin: auto;
+  line-height: 2;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+}
+
+.section-flower,
+.story-decoration {
+  color: var(--gold);
+  font-size: 40px;
+  margin: 20px;
+}
+
+.story-section {
+  background: #f5e4e2;
+}
+
+/* ========================================
+   COUNTDOWN
+======================================== */
+
+.countdown-section {
+  background: var(--wine);
+  color: white;
+}
+
+.countdown-section h2 {
+  color: var(--ivory);
+}
+
+.countdown-section .eyebrow {
+  color: #e8c98e;
+}
+
+.countdown {
   display: flex;
   justify-content: center;
-  gap: 14px;
-}
-
-.swatches i {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #e8c8c8;
-}
-
-.swatches i:nth-child(2) {
-  background: #d9c29d;
-}
-
-.swatches i:nth-child(3) {
-  background: #641b32;
-}
-
-/* RSVP */
-
-form {
-  display: grid;
+  flex-wrap: wrap;
   gap: 12px;
-  max-width: 480px;
-  margin: 25px auto;
+  margin-top: 35px;
 }
 
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #dfd0c8;
+.countdown div {
+  min-width: 68px;
+  padding: 18px 10px;
+  border: 1px solid rgba(220,190,140,.6);
+  background: rgba(255,255,255,.06);
+}
+
+.countdown strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 35px;
+  color: #f0d7aa;
+}
+
+.countdown span {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* ========================================
+   WEDDING EVENTS
+======================================== */
+
+.events-section {
+  background: #fff8f1;
+}
+
+.event-card {
+  max-width: 420px;
+  margin: 28px auto;
+  padding: 38px 20px;
   background: white;
-  font: 15px Arial, sans-serif;
+  border: 1px solid #dfc5a2;
+  box-shadow: 0 10px 30px rgba(80,30,40,.06);
+  position: relative;
 }
 
-textarea {
-  min-height: 90px;
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #f0e1cf;
+  pointer-events: none;
+}
+
+.event-icon {
+  color: var(--gold);
+  font-size: 35px;
+}
+
+.event-card h3 {
+  color: var(--wine);
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.event-card p {
+  line-height: 2;
+  font-size: 13px;
+}
+
+.event-date {
+  color: var(--gold);
+}
+
+.direction-link {
+  display: inline-block;
+  margin-top: 17px;
+  color: var(--wine);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 5px;
+}
+
+/* ========================================
+   OUR MOMENTS — FRAMED GALLERY
+======================================== */
+
+.moments-section {
+  background: linear-gradient(160deg, #f6e5e3, #fff8f1);
+  overflow: hidden;
+}
+
+.gallery-caption {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  margin-bottom: 35px;
+}
+
+.gallery-frame {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 15px 5px 25px;
+  flex: 1;
+  scrollbar-width: none;
+}
+
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-item {
+  flex: 0 0 75%;
+  max-width: 310px;
+  background: #fffdf8;
+  padding: 12px 12px 20px;
+  border: 1px solid #d5b98e;
+  box-shadow: 0 10px 25px rgba(70,20,40,.13);
+  scroll-snap-align: center;
+  transform: rotate(-1deg);
+}
+
+.gallery-item:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.gallery-item p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--wine);
+  margin-top: 13px;
+}
+
+.gallery-arrow {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--gold);
+  background: var(--wine);
+  color: white;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.gallery-hint {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 15px;
+}
+
+/* ========================================
+   COLOUR OF THE DAY
+======================================== */
+
+.colour-section {
+  background: #fffaf3;
+}
+
+.colour-section > p:not(.eyebrow) {
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.colour-palette {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 35px auto 18px;
+  flex-wrap: wrap;
+}
+
+.colour-palette div {
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  border: 3px solid white;
+  outline: 1px solid #d7bd98;
+  box-shadow: 0 4px 12px #00000010;
+}
+
+.colour-caption {
+  color: var(--wine);
+  font-size: 11px !important;
+}
+
+/* ========================================
+   RSVP
+======================================== */
+
+.rsvp-section {
+  background: #f4e3e1;
+}
+
+.rsvp-section > p:not(.eyebrow) {
+  max-width: 350px;
+  margin: 0 auto 25px;
+  line-height: 1.8;
+  font-size: 13px;
+}
+
+#rsvpForm {
+  max-width: 470px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e0c4b9;
+  background: #fffdf9;
+  color: var(--text);
+  outline: none;
+  font-size: 12px;
+}
+
+#rsvpForm input:focus,
+#rsvpForm select:focus,
+#rsvpForm textarea:focus {
+  border-color: var(--gold);
+}
+
+#rsvpForm textarea {
+  min-height: 110px;
   resize: vertical;
 }
 
-/* Footer */
+#rsvpForm button {
+  padding: 17px;
+  border: 1px solid var(--gold);
+  background: var(--wine);
+  color: white;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: .3s;
+}
 
-footer {
-  padding: 55px 20px;
-  background: #f6e9e4;
+#rsvpForm button:hover {
+  background: var(--gold);
+}
+
+#rsvpMessage {
+  margin-top: 20px;
   color: var(--wine);
 }
 
-/* Mobile and Desktop */
+/* ========================================
+   FOOTER
+======================================== */
 
-@media (min-width: 650px) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
+.closing-section {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #481626, #742b40);
+  color: white;
+}
+
+.closing-section h2 {
+  color: #f5dfbd;
+  font-size: 45px;
+  margin: 18px 0;
+}
+
+.closing-section > p:not(.eyebrow) {
+  line-height: 1.8;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+}
+
+.footer-flower {
+  color: #e8c98e;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.footer-names {
+  color: #f3d5b0;
+  font-size: 30px !important;
+}
+
+.copyright {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 9px !important;
+  letter-spacing: 4px;
+  margin-top: 40px;
+}
+
+/* ========================================
+   MUSIC BUTTON
+======================================== */
+
+.music-button {
+  position: fixed;
+  z-index: 20;
+  top: 18px;
+  right: 15px;
+  padding: 11px 16px;
+  border-radius: 30px;
+  background: var(--wine);
+  color: white;
+  border: 1px solid var(--gold);
+  box-shadow: 0 4px 15px #00000022;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 480px) {
+  .section {
+    padding: 70px 17px;
   }
+
+  .envelope {
+    height: 265px;
   }
-  
+
+  .envelope-paper h1 {
+    font-size: 37px;
+  }
+
+  .gallery-item {
+    flex-basis: 83%;
+  }
+
+  .gallery-item img {
+    height: 270px;
+  }
+
+  .gallery-arrow {
+    width: 30px;
+    height: 35px;
+  }
+
+  .countdown {
+    gap: 8px;
+  }
+
+  .countdown div {
+    min-width: 65px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
