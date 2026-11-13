@@ -4,14 +4,17 @@
 ======================================== */
 
 :root {
-  --wine: #641d32;
-  --deep-wine: #421322;
-  --rose: #d9a6a9;
-  --blush: #f5e4e2;
-  --cream: #fffaf3;
-  --ivory: #fff5e9;
-  --gold: #bd9860;
-  --text: #49333a;
+  
+:root {
+  --burgundy: #641B32;
+  --champagne: #D4AF78;
+  --ivory: #FFF8EF;
+  --cream: #F7EDE3;
+  --rose: #A66B78;
+  --dark: #32101F;
+  --white: #FFFFFF;
+}
+   
 }
 
 * {
