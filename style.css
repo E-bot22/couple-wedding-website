@@ -760,3 +760,109 @@ button, input, select, textarea {
     transition-duration: .01ms !important;
   }
 }
+
+/* =================================
+   LARGE COUPLE INTRODUCTION SECTION
+================================= */
+
+.couple-introduction {
+  position: relative;
+  width: 100%;
+  padding: 100px 7%;
+  text-align: center;
+  background: #fff9f6;
+  overflow: hidden;
+}
+
+.couple-intro-decoration {
+  color: #a66b72;
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.intro-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: #98636b;
+  margin-bottom: 22px;
+}
+
+.couple-names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(55px, 9vw, 105px);
+  font-weight: 400;
+  color: #541f32;
+  line-height: 1.1;
+  margin: 0 0 25px;
+}
+
+.couple-names span {
+  color: #bd9270;
+  font-style: italic;
+}
+
+.intro-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  line-height: 2;
+  color: #79515a;
+  margin-bottom: 45px;
+}
+
+.couple-main-photo {
+  width: 100%;
+  max-width: 950px;
+  height: 650px;
+  margin: auto;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #d9b99c;
+  box-shadow: 0 20px 55px rgba(70, 25, 40, 0.13);
+}
+
+.couple-main-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.intro-date {
+  margin-top: 35px;
+  color: #98636b;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.intro-flower {
+  margin-top: 30px;
+  font-size: 30px;
+  color: #bd9270;
+}
+
+@media (max-width: 600px) {
+  .couple-introduction {
+    padding: 75px 6%;
+  }
+
+  .couple-main-photo {
+    height: 420px;
+    padding: 8px;
+  }
+
+  .intro-label {
+    letter-spacing: 3px;
+  }
+
+  .intro-subtitle {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .intro-date {
+    letter-spacing: 2px;
+    line-height: 2;
+  }
+}
