@@ -1,213 +1,142 @@
 
-/* ========================================
-   WEDDING WEBSITE SETTINGS
-======================================== */
-
-// CHANGE THIS DATE TO THE REAL WEDDING DATE
+/* WEDDING WEBSITE SETTINGS */
 const weddingDate = new Date("2027-12-25T10:00:00");
+const coupleWhatsApp = ""; // Add the couple's number later.
 
-// Add the couple's WhatsApp number later.
-// Use international format without the + sign.
-const coupleWhatsApp = "";
-
-
-/* ========================================
-   OPENING INVITATION
-======================================== */
-
+/* OPENING INVITATION */
 const invitation = document.getElementById("invitation");
 const mainWebsite = document.getElementById("mainWebsite");
+const openInvitation = document.getElementById("openInvitation");
+const envelope = document.querySelector(".envelope");
 const music = document.getElementById("weddingMusic");
+const musicToggle = document.getElementById("musicToggle");
 
 let invitationOpened = false;
 
-invitation.addEventListener("click", function () {
-
+openInvitation.addEventListener("click", function () {
   if (invitationOpened) return;
-
   invitationOpened = true;
 
-  invitation.classList.add("opening");
+  envelope.classList.add("open");
 
-  // Allow the envelope animation to begin
+  // Start music directly after the guest taps.
+  music.play().catch(function () {
+    console.log("Music could not start automatically.");
+  });
+
   setTimeout(function () {
-
-    invitation.style.transition = "opacity 1s ease";
-    invitation.style.opacity = "0";
+    invitation.classList.add("opened");
 
     setTimeout(function () {
-
-      invitation.classList.add("hidden");
+      invitation.style.display = "none";
       mainWebsite.classList.remove("hidden");
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
-      // Start music after the guest's tap
-      music.play().catch(function () {
-        console.log("Music playback requires another tap.");
-      });
-
+      window.scrollTo(0, 0);
     }, 1000);
-
-  }, 900);
-
+  }, 1100);
 });
 
-
-/* ========================================
-   BACKGROUND MUSIC CONTROL
-======================================== */
-
-const musicToggle = document.getElementById("musicToggle");
-
+/* MUSIC CONTROL */
 musicToggle.addEventListener("click", function () {
-
   if (music.paused) {
-
-    music.play().then(function () {
-      musicToggle.innerHTML = "♫ Music On";
-    }).catch(function () {
-      musicToggle.innerHTML = "♫ Tap to Play";
+    music.play().catch(function () {
+      alert("Please tap again to play the music.");
     });
-
   } else {
-
     music.pause();
-    musicToggle.innerHTML = "♫ Music Off";
-
   }
-
 });
 
 music.addEventListener("play", function () {
-  musicToggle.innerHTML = "♫ Music On";
+  musicToggle.textContent = "♫ Music On";
 });
 
 music.addEventListener("pause", function () {
-  musicToggle.innerHTML = "♫ Music Off";
+  musicToggle.textContent = "♫ Music Off";
 });
 
-
-/* ========================================
-   WEDDING COUNTDOWN
-======================================== */
-
+/* WEDDING COUNTDOWN */
 function updateCountdown() {
+  const difference = weddingDate.getTime() - Date.now();
 
-  const now = new Date().getTime();
-  const target = weddingDate.getTime();
-
-  let difference = target - now;
+  const days = document.getElementById("days");
+  const hours = document.getElementById("hours");
+  const minutes = document.getElementById("minutes");
+  const seconds = document.getElementById("seconds");
 
   if (difference <= 0) {
-
-    document.getElementById("days").textContent = "00";
-    document.getElementById("hours").textContent = "00";
-    document.getElementById("minutes").textContent = "00";
-    document.getElementById("seconds").textContent = "00";
-
+    days.textContent = "00";
+    hours.textContent = "00";
+    minutes.textContent = "00";
+    seconds.textContent = "00";
     return;
   }
 
-  const days = Math.floor(
-    difference / (1000 * 60 * 60 * 24)
-  );
+  days.textContent = String(
+    Math.floor(difference / 86400000)
+  ).padStart(2, "0");
 
-  const hours = Math.floor(
-    (difference / (1000 * 60 * 60)) % 24
-  );
+  hours.textContent = String(
+    Math.floor((difference / 3600000) % 24)
+  ).padStart(2, "0");
 
-  const minutes = Math.floor(
-    (difference / (1000 * 60)) % 60
-  );
+  minutes.textContent = String(
+    Math.floor((difference / 60000) % 60)
+  ).padStart(2, "0");
 
-  const seconds = Math.floor(
-    (difference / 1000) % 60
-  );
-
-  document.getElementById("days").textContent =
-    String(days).padStart(2, "0");
-
-  document.getElementById("hours").textContent =
-    String(hours).padStart(2, "0");
-
-  document.getElementById("minutes").textContent =
-    String(minutes).padStart(2, "0");
-
-  document.getElementById("seconds").textContent =
-    String(seconds).padStart(2, "0");
-
+  seconds.textContent = String(
+    Math.floor((difference / 1000) % 60)
+  ).padStart(2, "0");
 }
 
 updateCountdown();
-
 setInterval(updateCountdown, 1000);
 
-
-/* ========================================
-   OUR MOMENTS GALLERY
-======================================== */
-
+/* OUR MOMENTS GALLERY */
 const galleryTrack = document.getElementById("galleryTrack");
-
 const galleryNext = document.getElementById("galleryNext");
-
 const galleryPrev = document.getElementById("galleryPrev");
 
 galleryNext.addEventListener("click", function () {
-
   galleryTrack.scrollBy({
-    left: 280,
+    left: galleryTrack.clientWidth * 0.8,
     behavior: "smooth"
   });
-
 });
 
 galleryPrev.addEventListener("click", function () {
-
   galleryTrack.scrollBy({
-    left: -280,
+    left: -galleryTrack.clientWidth * 0.8,
     behavior: "smooth"
   });
-
 });
 
+/* RSVP INVITATION */
+const openRsvpButton = document.getElementById("openRsvpButton");
+const rsvpFormPanel = document.getElementById("rsvpFormPanel");
 
-/* ========================================
-   RSVP FORM
-======================================== */
+openRsvpButton.addEventListener("click", function () {
+  rsvpFormPanel.classList.remove("hidden");
 
+  rsvpFormPanel.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  openRsvpButton.textContent = "FORM OPENED";
+});
+
+/* RSVP FORM */
 const rsvpForm = document.getElementById("rsvpForm");
 
 rsvpForm.addEventListener("submit", function (event) {
-
   event.preventDefault();
 
-  const name =
-    document.getElementById("guestName").value.trim();
-
-  const email =
-    document.getElementById("guestEmail").value.trim();
-
-  const phone =
-    document.getElementById("guestPhone").value.trim();
-
-  const attendance =
-    document.getElementById("attendance").value;
-
-  const guestCount =
-    document.getElementById("guestCount").value;
-
-  const note =
-    document.getElementById("guestNote").value.trim();
-
-  if (!name || !attendance) {
-    alert("Please enter your name and attendance response.");
-    return;
-  }
+  const name = document.getElementById("guestName").value.trim();
+  const email = document.getElementById("guestEmail").value.trim();
+  const phone = document.getElementById("guestPhone").value.trim();
+  const attendance = document.getElementById("attendance").value;
+  const guestCount = document.getElementById("guestCount").value;
+  const note = document.getElementById("guestMessage").value.trim();
 
   const message =
     "WEDDING RSVP\n\n" +
@@ -218,46 +147,16 @@ rsvpForm.addEventListener("submit", function (event) {
     "Number of guests: " + guestCount + "\n" +
     "Message: " + note;
 
-  if (coupleWhatsApp.trim() === "") {
-
-    alert(
-      "Thank you, " + name +
-      "! Your response has been prepared. The couple's WhatsApp number will be connected when the wedding details are added."
-    );
-
+  if (!coupleWhatsApp.trim()) {
+    alert("Thank you, " + name +
+      "! The RSVP form is working. The couple's WhatsApp number still needs to be connected.");
     return;
-
   }
 
-  const whatsappURL =
-    "https://wa.me/" +
-    coupleWhatsApp +
-    "?text=" +
-    encodeURIComponent(message);
-
-  window.open(whatsappURL, "_blank");
-
+  window.open(
+    "https://wa.me/" + coupleWhatsApp +
+    "?text=" + encodeURIComponent(message),
+    "_blank"
+  );
 });
-
-// RSVP INVITATION OPENING
-const openRsvpButton = document.getElementById("openRsvpButton");
-const rsvpFormPanel = document.getElementById("rsvpFormPanel");
-
-if (openRsvpButton && rsvpFormPanel) {
-  openRsvpButton.addEventListener("click", function () {
-    rsvpFormPanel.classList.remove("hidden");
-
-    rsvpFormPanel.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-
-    openRsvpButton.textContent = "RSVP FORM OPENED";
-  });
-}
-
-
-
-/* ========================================
-   END OF WEDDING WEBSITE SCRIPT
-======================================== */
+   
